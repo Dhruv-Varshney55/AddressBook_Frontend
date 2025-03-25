@@ -1,0 +1,104 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  padding: 20px 30px;
+}
+
+.modal-header {
+  background: #2196f3;
+  color: white;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+.modal-header::after {
+  content: "✖";
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2196f3;
+  outline: none;
+  box-shadow: 0 0 6px rgba(33, 150, 243, 0.3);
+}
+
+/* City, State, Zip Code in One Row */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row .form-group {
+  flex: 1;
+}
+
+/* Button Styles */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: #e0e0e0;
+  color: #333;
+}
+
+.btn:hover {
+  background: #d6d6d6;
+}

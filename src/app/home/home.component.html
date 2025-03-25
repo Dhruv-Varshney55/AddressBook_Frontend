@@ -1,0 +1,27 @@
+<table class="address-table">
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Phone Number</th>
+      <th>Actions</th>  <!-- ✅ Added column for buttons -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of addresses()">
+      <td>{{ person.name }}</td>
+      <td>{{ person.email }}</td>
+      <td>{{ person.address }}</td>
+      <td>{{ person.phoneNumber }}</td>
+      <td class="action-buttons">
+        <button class="icon-btn" (click)="editAddress(person.id, person)">
+          <i class="fas fa-pencil-alt"></i> <!-- Edit Icon -->
+        </button>
+        <button class="icon-btn" (click)="deleteAddress(person.id)">
+          <i class="fas fa-trash-alt"></i> <!-- Delete Icon -->
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

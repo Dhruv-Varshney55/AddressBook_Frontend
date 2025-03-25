@@ -1,0 +1,34 @@
+<div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>ADDRESS FORM</h2>
+
+      </div>
+  
+      <form [formGroup]="addressForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" formControlName="name" required />
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" formControlName="email" required />
+          </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" formControlName="phoneNumber" required />
+        </div>
+  
+        <div class="form-group">
+          <label>Address</label>
+          <textarea formControlName="address" required></textarea>
+        </div>
+  
+        <div class="button-group">
+          <button type="submit" class="btn add-btn">Add</button>
+          <button type="button" class="btn reset-btn" (click)="resetForm()">Reset</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
